@@ -4,6 +4,8 @@ import javax.swing.Timer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.KeyStroke;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class GamePanel extends JPanel implements ActionListener {
 
@@ -11,12 +13,16 @@ public class GamePanel extends JPanel implements ActionListener {
 
     private Bird bird;
 
-    private Pipe pipe;
+    private ArrayList<Pipe> pipes;
+
+    private int pipeTimer;
 
     public GamePanel() {
 
         bird = new Bird();
-        pipe = new Pipe();
+        pipes = new ArrayList<>();
+        pipes.add(new Pipe());
+        pipeTimer=0;
 
         timer = new Timer(16, this);
         timer.start();
@@ -38,7 +44,9 @@ public class GamePanel extends JPanel implements ActionListener {
 
         bird.draw(g);
 
-        pipe.draw(g);
+        for(Pipe pipe : pipes){
+            pipe.draw(g);
+        }
     }
 
     @Override
@@ -46,7 +54,24 @@ public class GamePanel extends JPanel implements ActionListener {
         
         bird.update(getHeight());
 
-        pipe.update();
+        Iterator<Pipe> iterator = pipes.iterator();
+
+        while (iterator.hasNext()) {
+            Pipe pipe = iterator.next();
+
+            pipe.update();
+            
+            if(pipe.isOffScreen()){
+                iterator.remove();
+            }   
+        }
+
+        pipeTimer++;
+
+        if(pipeTimer >= 100){
+            pipes.add(new Pipe());
+            pipeTimer = 0;
+        }
 
         repaint();
     }

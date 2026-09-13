@@ -36,4 +36,8 @@ public class Pipe {
         g.fillRect(x, 0, width, gapY); //Top Pipe
         g.fillRect(x, gapY + gapHeight, width, 600-(gapY + gapHeight)); //Bottem Pipe
     }
+
+    public boolean isOffScreen(){
+        return x + width < 0;
+    }
 }
