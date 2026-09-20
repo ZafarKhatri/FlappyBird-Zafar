@@ -8,8 +8,11 @@ This project is being developed incrementally as a learning project. The goal is
 
 ```text
 FlappyBird-Zafar/
+
 ├── FLOW_DIAGRAM_REFRENCE.png
+├── progress.md
 └── src/
+
     ├── Bird.java
     ├── Game.java
     ├── GamePanel.java
@@ -20,73 +23,98 @@ FlappyBird-Zafar/
 ## 🚀 Development Progress
 
 ### Phase 1 — Foundation
-- [x] Create Java project
-- [x] Create main game entry point
-- [x] Create game window
-- [x] Create `GamePanel`
-- [x] Set up the game loop
+
+* [x] Create Java project
+* [x] Create main game entry point
+* [x] Create game window
+* [x] Create `GamePanel`
+* [x] Set up the game loop
 
 ### Phase 2 — Bird Physics & Input
-- [x] Create `Bird` class
-- [x] Add gravity
-- [x] Make the bird fall
-- [x] Add jump functionality
-- [x] Add keyboard input
+
+* [x] Create `Bird` class
+* [x] Add gravity
+* [x] Make the bird fall
+* [x] Add jump functionality
+* [x] Add keyboard input
 
 ### Phase 3 — Pipes
-- [x] Create `Pipe` class
-- [x] Add pipes to the game
-- [x] Add pipe gap
-- [x] Make the gap work correctly
-- [x] Add random pipe gaps
+
+* [x] Create `Pipe` class
+* [x] Add pipes to the game
+* [x] Add pipe gap
+* [x] Make the gap work correctly
+* [x] Add random pipe gaps
+* [x] Add pipe movement
+* [x] Remove pipes after they leave the screen
+
+### Phase 4 — Core Gameplay
+
+* [x] Bird-pipe collision detection
+* [x] Ground collision
+* [x] Game Over state
+* [x] Detect passed pipes
+* [x] Score system
+* [x] Display score
 
 ## 📍 Current Status
 
-**Step 14 — Random Pipe Gaps: COMPLETE ✅**
+**Step 18 — Pipe Passing & Score Increment: COMPLETE ✅**
 
-The project is currently ready to move into the next stage.
+The core gameplay systems are now working, including pipe movement, collision detection, Game Over detection, and score tracking.
 
 ### Next Step
-**Step 15 — Pipe Movement**
 
-The next goal is to make the pipes continuously move from right to left across the screen.
+**Step 19 — Restart / Replay**
+
+The next goal is to allow the player to restart the game after Game Over.
 
 ## 🗺️ Planned Roadmap
 
-### Phase 4 — Core Gameplay
-- [ ] Pipe movement
-- [ ] Remove pipes after they leave the screen
-- [ ] Bird-pipe collision detection
-- [ ] Game Over state
-- [ ] Restart functionality
-- [ ] Score system
-- [ ] Display score
+### Phase 5 — Game States & Replay
 
-### Phase 5 — Polish
-- [ ] Improve graphics
-- [ ] Add start screen
-- [ ] Add sound effects
-- [ ] Add difficulty progression
-- [ ] Add high-score system
+* [ ] Restart / Replay functionality
+* [ ] Start screen
+* [ ] Game states
+* [ ] Game Over screen
+
+### Phase 6 — Polish
+
+* [ ] Improve graphics
+* [ ] Add bird animation
+* [ ] Add sound effects
+* [ ] Add difficulty progression
+* [ ] Add high-score system
+
+### Phase 7 — Finalization
+
+* [ ] Code cleanup
+* [ ] Testing
+* [ ] Bug fixing
+* [ ] Final documentation
 
 ## 🎯 Learning Approach
 
 This project is being developed step-by-step with a focus on understanding:
 
-- Java classes and objects
-- Swing components
-- Game loops
-- Timers and event handling
-- Keyboard input
-- 2D movement
-- Collision detection
-- Game states
-- Score systems
-- Clean project structure
+* Java classes and objects
+* Swing components
+* Game loops
+* Timers and event handling
+* Keyboard input
+* 2D movement
+* Collision detection
+* Game states
+* Score systems
+* Clean project structure
 
 ## 🛠️ Technology
 
-- Java
-- Java Swing
-- Git
-- GitHub
+* Java
+* Java Swing
+* Git
+* GitHub
+
+## 📌 Development Tracker
+
+Detailed step-by-step development progress is maintained in [`progress.md`](progress.md).
