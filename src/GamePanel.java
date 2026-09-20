@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -17,12 +18,18 @@ public class GamePanel extends JPanel implements ActionListener {
 
     private int pipeTimer;
 
+    private boolean gameOver;
+
+    private int score;
+
     public GamePanel() {
 
         bird = new Bird();
         pipes = new ArrayList<>();
         pipes.add(new Pipe());
-        pipeTimer=0;
+        pipeTimer = 0;
+        gameOver = false;
+        score = 0;
 
         timer = new Timer(16, this);
         timer.start();
@@ -47,12 +54,24 @@ public class GamePanel extends JPanel implements ActionListener {
         for(Pipe pipe : pipes){
             pipe.draw(g);
         }
+
+        g.setColor(Color.BLACK);
+        g.drawString("Score: " + score, 20, 30);
     }
 
     @Override
     public void actionPerformed(ActionEvent e){
+
+        if(gameOver){
+            return;
+        }
         
         bird.update(getHeight());
+
+        if(bird.isOnGround(getHeight())){
+            gameOver = true;
+            System.out.println("Game Over!");
+        }
 
         Iterator<Pipe> iterator = pipes.iterator();
 
@@ -60,6 +79,17 @@ public class GamePanel extends JPanel implements ActionListener {
             Pipe pipe = iterator.next();
 
             pipe.update();
+
+            if(bird.getBounds().intersects(pipe.getTopBounds()) || bird.getBounds().intersects(pipe.getBottomBounds())){
+
+                gameOver = true;
+                System.out.println("Game Over!");
+            }
+
+            if(!pipe.isScored() && pipe.isPassed(bird.getX())){
+                score++;
+                pipe.setScored();
+            }
             
             if(pipe.isOffScreen()){
                 iterator.remove();

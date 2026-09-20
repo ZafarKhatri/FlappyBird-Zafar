@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Rectangle;
 
 public class Bird {
     private int x;
@@ -39,9 +40,21 @@ public class Bird {
     public void flap() {
         velocityY = -8;
     }
+    
+    public Rectangle getBounds(){
+        return new Rectangle(x, y, width, height);
+    }
+
+    public boolean isOnGround(int gameHeight){
+        return y + height >= gameHeight;
+    }
 
     public void draw(Graphics g){
         g.setColor(Color.YELLOW);
         g.fillRect(x, y, width, height);
+    }
+
+    public int getX(){
+        return x;
     }
 }

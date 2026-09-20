@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Random;
+import java.awt.Rectangle;
 
 public class Pipe {
     private int x;
@@ -13,6 +14,8 @@ public class Pipe {
 
     private Random random;
 
+    private boolean scored;
+
     public Pipe(){
 
         random = new Random();
@@ -24,6 +27,8 @@ public class Pipe {
 
         width = 60;
         speed = 3;
+
+        scored = false;
 
     }
 
@@ -39,5 +44,25 @@ public class Pipe {
 
     public boolean isOffScreen(){
         return x + width < 0;
+    }
+
+    public boolean isScored(){
+        return scored;
+    }
+
+    public void setScored(){
+        scored = true;
+    }
+
+    public Rectangle getTopBounds(){
+        return new Rectangle(x, 0, width, gapY);
+    }
+
+    public boolean isPassed(int birdX){
+        return x + width < birdX;
+    }
+
+    public Rectangle getBottomBounds(){
+        return new Rectangle(x, gapY + gapHeight, width, 600 - (gapY +gapHeight));
     }
 }

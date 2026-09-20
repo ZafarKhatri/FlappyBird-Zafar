@@ -4,64 +4,60 @@ This file is the working progress tracker for the project.
 
 ## Current Position
 
-**Step 14 — Random Pipe Gaps ✅**
+**Step 18 — Pipe Passing & Score Increment ✅**
 
-**Next: Step 15 — Pipe Movement**
+**Next: Step 19 — Restart / Replay**
 
 ---
 
 ## Phase 1 — Foundation
 
-- [x] Java project setup
-- [x] Main game entry point
-- [x] Game window
-- [x] `GamePanel`
-- [x] Game loop
+* [x] Java project setup
+* [x] Main game entry point
+* [x] Game window
+* [x] `GamePanel`
+* [x] Game loop
 
 ## Phase 2 — Bird
 
-- [x] `Bird` class
-- [x] Gravity
-- [x] Bird falls downward
-- [x] Jump
-- [x] Keyboard control
+* [x] `Bird` class
+* [x] Gravity
+* [x] Bird falls downward
+* [x] Jump
+* [x] Keyboard control
 
 ## Phase 3 — Pipes
 
-- [x] `Pipe` class
-- [x] Pipe creation
-- [x] Pipe gap
-- [x] Gap working correctly
-- [x] Random gap generation
+* [x] `Pipe` class
+* [x] Pipe creation
+* [x] Pipe gap
+* [x] Gap working correctly
+* [x] Random gap generation
 
 ## Phase 4 — Core Gameplay
 
-- [ ] Step 15 — Pipe movement
-- [ ] Step 16 — Remove old/off-screen pipes
-- [ ] Step 17 — Bird-pipe collision
-- [ ] Step 18 — Game Over state
-- [ ] Step 19 — Restart game
-- [ ] Step 20 — Score system
-- [ ] Step 21 — Display score
-
-## Phase 5 — Polish & Advanced Features
-
-- [ ] Improve graphics
-- [ ] Start screen
-- [ ] Sound effects
-- [ ] Difficulty progression
-- [ ] High score
-- [ ] Additional advanced functionality
+* [x] Step 15 — Bird-pipe collision
+* [x] Step 16 — Ground collision / Game Over
+* [x] Step 17 — Display score
+* [x] Step 18 — Pipe passing & score increment
+* [ ] Step 19 — Restart game
+* [ ] Step 20 — Game states
+* [ ] Step 21 — Improve graphics
+* [ ] Step 22 — Bird animation
+* [ ] Step 23 — Sound effects
+* [ ] Step 24 — Difficulty progression
+* [ ] Step 25 — Final cleanup & testing
 
 ---
 
 ## Git Checkpoints
 
-| Checkpoint | Status |
-|---|---|
-| Initial project commit | ✅ Pushed |
-| Progress through Step 14 | 🔄 Being documented |
-| Step 15 onward | ⬜ Upcoming |
+| Checkpoint               | Status              |
+| ------------------------ | ------------------- |
+| Initial project commit   | ✅ Pushed            |
+| Progress through Step 14 | ✅ Completed         |
+| Progress through Step 18 | 🔄 Being documented |
+| Step 19 onward           | ⬜ Upcoming          |
 
 ## Rule for Future Updates
 
