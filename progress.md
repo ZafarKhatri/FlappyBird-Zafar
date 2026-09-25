@@ -52,12 +52,12 @@ This file is the working progress tracker for the project.
 
 ## Git Checkpoints
 
-| Checkpoint               | Status              |
-| ------------------------ | ------------------- |
-| Initial project commit   | ✅ Pushed            |
-| Progress through Step 14 | ✅ Completed         |
-| Progress through Step 18 | 🔄 Being documented |
-| Step 19 onward           | ⬜ Upcoming          |
+| Checkpoint               | Status |
+| ------------------------ | ------ |
+| Initial project commit   | ✅ Pushed |
+| Progress through Step 14 | ✅ Completed |
+| Progress through Step 18 | ✅ Completed |
+| Step 19 onward           | ⬜ Upcoming |
 
 ## Rule for Future Updates
 
