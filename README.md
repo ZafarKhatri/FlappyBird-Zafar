@@ -60,9 +60,9 @@ FlappyBird-Zafar/
 
 ## 📍 Current Status
 
-**Step 20 — Game States: COMPLETE ✅**
+**Step 21 — Improve Graphics: COMPLETE ✅**
 
-The game now supports restarting after Game Over and uses game states to control the main gameplay flow.
+The game now has an improved visual presentation, including a sky background, improved bird, pipe caps and highlights, ground, and a larger score display.
 
 ### Current Game Flow
 
@@ -92,7 +92,7 @@ The old `gameOver` boolean logic has been replaced by the `gameState` system.
 
 ### Next Step
 
-**Step 21 — Improve Graphics**
+**Step 22 — Bird Animation**
 
 The next goal is to improve the visual presentation of the game.
 
@@ -107,7 +107,7 @@ The next goal is to improve the visual presentation of the game.
 
 ### Phase 6 — Polish
 
-* [ ] Improve graphics
+* [x] Improve graphics
 * [ ] Add bird animation
 * [ ] Add sound effects
 * [ ] Add difficulty progression
