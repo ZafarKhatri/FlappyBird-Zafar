@@ -58,7 +58,7 @@ This file is the working progress tracker for the project.
 | Progress through Step 14  | ✅ Completed |
 | Progress through Step 18  | ✅ Completed |
 | Progress through Step 20  | ✅ Completed |
-| Progress through Step 21  | ⬜ Upcoming  |
+| Progress through Step 21  | ✅ Completed |
 
 ## Rule for Future Updates
 
