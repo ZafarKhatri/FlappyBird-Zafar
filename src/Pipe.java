@@ -37,9 +37,19 @@ public class Pipe {
     }
 
     public void draw(Graphics g){
-        g.setColor(Color.GREEN);
+        g.setColor(new Color(34, 139, 34));
+
         g.fillRect(x, 0, width, gapY); //Top Pipe
+        g.fillRect(x - 5, gapY - 20, width + 10, 20);
+
         g.fillRect(x, gapY + gapHeight, width, 600-(gapY + gapHeight)); //Bottem Pipe
+        g.fillRect(x - 5, gapY + gapHeight, width + 10, 20);
+
+        //pipe highlight
+        g.setColor(new Color(50, 180, 50));
+
+        g.fillRect(x + 10, 0, 8, gapY);
+        g.fillRect(x + 10, gapY + gapHeight, 8, 600 - (gapY + gapHeight));
     }
 
     public boolean isOffScreen(){

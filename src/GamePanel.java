@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.KeyStroke;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.awt.Font;
 
 public class GamePanel extends JPanel implements ActionListener {
 
@@ -59,14 +60,23 @@ public class GamePanel extends JPanel implements ActionListener {
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
 
+        //sky background
+        g.setColor(new Color(135,206,235));
+        g.fillRect(0, 0, getWidth(), getHeight());
+
+        //ground
+        g.setColor(new Color(222, 184, 135));
+        g.fillRect(0, getHeight() - 40, getWidth(), 40);
+
         bird.draw(g);
 
         for(Pipe pipe : pipes){
             pipe.draw(g);
         }
 
-        g.setColor(Color.BLACK);
-        g.drawString("Score: " + score, 20, 30);
+        g.setColor(Color.WHITE);
+        g.setFont(new Font("Arial", Font.BOLD, 24));
+        g.drawString("Score: " + score, 20, 35);
     }
 
     @Override

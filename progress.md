@@ -4,9 +4,9 @@ This file is the working progress tracker for the project.
 
 ## Current Position
 
-**Step 20 — Game States ✅**
+**Step 21 — Improve Graphics ✅**
 
-**Next: Step 21 — Improve Graphics**
+**Next: Step 22 — Bird Animation**
 
 ---
 
@@ -42,7 +42,7 @@ This file is the working progress tracker for the project.
 * [x] Step 18 — Pipe passing & score increment
 * [x] Step 19 — Restart game
 * [x] Step 20 — Game states
-* [ ] Step 21 — Improve graphics
+* [x] Step 21 — Improve graphics
 * [ ] Step 22 — Bird animation
 * [ ] Step 23 — Sound effects
 * [ ] Step 24 — Difficulty progression
@@ -52,13 +52,13 @@ This file is the working progress tracker for the project.
 
 ## Git Checkpoints
 
-| Checkpoint               | Status      |
-| ------------------------ | ----------- |
-| Initial project commit   | ✅ Pushed    |
-| Progress through Step 14 | ✅ Completed |
-| Progress through Step 18 | ✅ Completed |
-| Progress through Step 20 | ✅ Completed |
-| Step 21 onward           | ⬜ Upcoming  |
+| Checkpoint                | Status      |
+| ------------------------- | ----------- |
+| Initial project commit    | ✅ Pushed    |
+| Progress through Step 14  | ✅ Completed |
+| Progress through Step 18  | ✅ Completed |
+| Progress through Step 20  | ✅ Completed |
+| Progress through Step 21  | ⬜ Upcoming  |
 
 ## Rule for Future Updates
 

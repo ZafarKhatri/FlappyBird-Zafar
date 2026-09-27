@@ -50,8 +50,21 @@ public class Bird {
     }
 
     public void draw(Graphics g){
+        //Body
         g.setColor(Color.YELLOW);
         g.fillRect(x, y, width, height);
+        //Eye
+        g.setColor(Color.WHITE);
+        g.fillOval(x + 25, y + 5, 10, 10);
+        //Pupil
+        g.setColor(Color.BLACK);
+        g.fillOval(x + 29, y + 8, 5, 5);
+        //Beak
+        g.setColor(Color.ORANGE);
+        g.fillRect(x + width - 2, y + 12, 10, 6);
+        //Wing
+        g.setColor(Color.ORANGE);
+        g.fillOval(x + 8, y +15, 18, 10);
     }
 
     public int getX(){
