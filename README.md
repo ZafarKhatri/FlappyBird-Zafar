@@ -12,7 +12,6 @@ FlappyBird-Zafar/
 ├── FLOW_DIAGRAM_REFRENCE.png
 ├── progress.md
 └── src/
-
     ├── Bird.java
     ├── Game.java
     ├── GamePanel.java
@@ -52,30 +51,58 @@ FlappyBird-Zafar/
 
 * [x] Bird-pipe collision detection
 * [x] Ground collision
-* [x] Game Over state
+* [x] Game Over detection
 * [x] Detect passed pipes
 * [x] Score system
 * [x] Display score
+* [x] Restart / Replay functionality
+* [x] Game state system
 
 ## 📍 Current Status
 
-**Step 18 — Pipe Passing & Score Increment: COMPLETE ✅**
+**Step 20 — Game States: COMPLETE ✅**
 
-The core gameplay systems are now working, including pipe movement, collision detection, Game Over detection, and score tracking.
+The game now supports restarting after Game Over and uses game states to control the main gameplay flow.
+
+### Current Game Flow
+
+```text
+READY
+  │
+  │ SPACE
+  ▼
+PLAYING
+  │
+  │ Collision / Ground
+  ▼
+GAME_OVER
+  │
+  │ SPACE
+  ▼
+PLAYING
+```
+
+The current game states are:
+
+* `READY`
+* `PLAYING`
+* `GAME_OVER`
+
+The old `gameOver` boolean logic has been replaced by the `gameState` system.
 
 ### Next Step
 
-**Step 19 — Restart / Replay**
+**Step 21 — Improve Graphics**
 
-The next goal is to allow the player to restart the game after Game Over.
+The next goal is to improve the visual presentation of the game.
 
 ## 🗺️ Planned Roadmap
 
 ### Phase 5 — Game States & Replay
 
-* [ ] Restart / Replay functionality
+* [x] Restart / Replay functionality
+* [x] Game states
 * [ ] Start screen
-* [ ] Game states
 * [ ] Game Over screen
 
 ### Phase 6 — Polish

@@ -18,7 +18,7 @@ public class GamePanel extends JPanel implements ActionListener {
 
     private int pipeTimer;
 
-    private boolean gameOver;
+    private String gameState;
 
     private int score;
 
@@ -28,7 +28,7 @@ public class GamePanel extends JPanel implements ActionListener {
         pipes = new ArrayList<>();
         pipes.add(new Pipe());
         pipeTimer = 0;
-        gameOver = false;
+        gameState = "READY";
         score = 0;
 
         timer = new Timer(16, this);
@@ -40,7 +40,17 @@ public class GamePanel extends JPanel implements ActionListener {
         getActionMap().put("flap", new javax.swing.AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e){
-                bird.flap();
+                
+                if(gameState.equals("READY")){
+                    gameState = "PLAYING";
+                    bird.flap();
+                }
+                else if(gameState.equals("GAME_OVER")){
+                    restartGame();
+                }
+                else{
+                    bird.flap();
+                }
             }
         });
     }
@@ -62,14 +72,14 @@ public class GamePanel extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e){
 
-        if(gameOver){
+        if(gameState.equals("GAME_OVER")){
             return;
         }
         
         bird.update(getHeight());
 
         if(bird.isOnGround(getHeight())){
-            gameOver = true;
+            gameState = "GAME_OVER";
             System.out.println("Game Over!");
         }
 
@@ -82,7 +92,7 @@ public class GamePanel extends JPanel implements ActionListener {
 
             if(bird.getBounds().intersects(pipe.getTopBounds()) || bird.getBounds().intersects(pipe.getBottomBounds())){
 
-                gameOver = true;
+                gameState = "GAME_OVER";
                 System.out.println("Game Over!");
             }
 
@@ -104,5 +114,15 @@ public class GamePanel extends JPanel implements ActionListener {
         }
 
         repaint();
+    }
+    private void restartGame(){
+        bird = new Bird();
+        
+        pipes.clear();
+        pipes.add(new Pipe());
+
+        pipeTimer = 0;
+        score = 0;
+        gameState = "PLAYING";
     }
 }

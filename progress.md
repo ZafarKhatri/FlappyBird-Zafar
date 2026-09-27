@@ -4,9 +4,9 @@ This file is the working progress tracker for the project.
 
 ## Current Position
 
-**Step 18 — Pipe Passing & Score Increment ✅**
+**Step 20 — Game States ✅**
 
-**Next: Step 19 — Restart / Replay**
+**Next: Step 21 — Improve Graphics**
 
 ---
 
@@ -40,8 +40,8 @@ This file is the working progress tracker for the project.
 * [x] Step 16 — Ground collision / Game Over
 * [x] Step 17 — Display score
 * [x] Step 18 — Pipe passing & score increment
-* [ ] Step 19 — Restart game
-* [ ] Step 20 — Game states
+* [x] Step 19 — Restart game
+* [x] Step 20 — Game states
 * [ ] Step 21 — Improve graphics
 * [ ] Step 22 — Bird animation
 * [ ] Step 23 — Sound effects
@@ -52,12 +52,22 @@ This file is the working progress tracker for the project.
 
 ## Git Checkpoints
 
+<<<<<<< HEAD
 | Checkpoint               | Status |
 | ------------------------ | ------ |
 | Initial project commit   | ✅ Pushed |
 | Progress through Step 14 | ✅ Completed |
 | Progress through Step 18 | ✅ Completed |
 | Step 19 onward           | ⬜ Upcoming |
+=======
+| Checkpoint               | Status              |
+| ------------------------ | ------------------- |
+| Initial project commit   | ✅ Pushed            |
+| Progress through Step 14 | ✅ Completed         |
+| Progress through Step 18 | ✅ Completed         |
+| Progress through Step 20 | 🔄 Being documented |
+| Step 21 onward           | ⬜ Upcoming          |
+>>>>>>> d9b3a5c (Complete restart and game states-till step 20)
 
 ## Rule for Future Updates
 
