@@ -52,22 +52,13 @@ This file is the working progress tracker for the project.
 
 ## Git Checkpoints
 
-<<<<<<< HEAD
-| Checkpoint               | Status |
-| ------------------------ | ------ |
-| Initial project commit   | ✅ Pushed |
+| Checkpoint               | Status      |
+| ------------------------ | ----------- |
+| Initial project commit   | ✅ Pushed    |
 | Progress through Step 14 | ✅ Completed |
 | Progress through Step 18 | ✅ Completed |
-| Step 19 onward           | ⬜ Upcoming |
-=======
-| Checkpoint               | Status              |
-| ------------------------ | ------------------- |
-| Initial project commit   | ✅ Pushed            |
-| Progress through Step 14 | ✅ Completed         |
-| Progress through Step 18 | ✅ Completed         |
-| Progress through Step 20 | 🔄 Being documented |
-| Step 21 onward           | ⬜ Upcoming          |
->>>>>>> d9b3a5c (Complete restart and game states-till step 20)
+| Progress through Step 20 | ✅ Completed |
+| Step 21 onward           | ⬜ Upcoming  |
 
 ## Rule for Future Updates
 
