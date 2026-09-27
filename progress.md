@@ -4,9 +4,9 @@ This file is the working progress tracker for the project.
 
 ## Current Position
 
-**Step 21 — Improve Graphics ✅**
+**Step 20 — Game States ✅**
 
-**Next: Step 22 — Bird Animation**
+**Next: Step 21 — Improve Graphics**
 
 ---
 
@@ -42,7 +42,7 @@ This file is the working progress tracker for the project.
 * [x] Step 18 — Pipe passing & score increment
 * [x] Step 19 — Restart game
 * [x] Step 20 — Game states
-* [x] Step 21 — Improve graphics
+* [ ] Step 21 — Improve graphics
 * [ ] Step 22 — Bird animation
 * [ ] Step 23 — Sound effects
 * [ ] Step 24 — Difficulty progression
@@ -58,9 +58,7 @@ This file is the working progress tracker for the project.
 | Progress through Step 14 | ✅ Completed |
 | Progress through Step 18 | ✅ Completed |
 | Progress through Step 20 | ✅ Completed |
-| Progress through Step 21 | ⬜ Upcoming  |
-| Progress through Step 21 | ⬜ Upcoming  |
-| Step 22 onward           | ⬜ Upcoming  |
+| Step 21 onward           | ⬜ Upcoming  |
 
 ## Rule for Future Updates
 
