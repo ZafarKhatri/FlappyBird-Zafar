@@ -62,7 +62,7 @@ This file is the working progress tracker for the project.
 
 ## Rule for Future Updates
 
-Whenever a meaningful step is completed:
+Whenever a meaningful step is completed:-
 
 1. Update this progress file.
 2. Update the README if needed.
