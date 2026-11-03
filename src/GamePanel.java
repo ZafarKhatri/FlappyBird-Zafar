@@ -15,6 +15,8 @@ public class GamePanel extends JPanel implements ActionListener {
 
     private Bird bird;
 
+    private SoundManager soundManager;
+
     private ArrayList<Pipe> pipes;
 
     private int pipeTimer;
@@ -26,6 +28,10 @@ public class GamePanel extends JPanel implements ActionListener {
     public GamePanel() {
 
         bird = new Bird();
+        soundManager = new SoundManager();
+        soundManager.loadFlapSound();
+        soundManager.loadScoreSound();
+        soundManager.loadGameOverSound();
         pipes = new ArrayList<>();
         pipes.add(new Pipe());
         pipeTimer = 0;
@@ -45,12 +51,14 @@ public class GamePanel extends JPanel implements ActionListener {
                 if(gameState.equals("READY")){
                     gameState = "PLAYING";
                     bird.flap();
+                    soundManager.playFlapSound();
                 }
                 else if(gameState.equals("GAME_OVER")){
                     restartGame();
                 }
                 else{
                     bird.flap();
+                    soundManager.playFlapSound();
                 }
             }
         });
@@ -91,6 +99,7 @@ public class GamePanel extends JPanel implements ActionListener {
 
         if(bird.isOnGround(getHeight())){
             gameState = "GAME_OVER";
+            soundManager.playGameOverSound();
             System.out.println("Game Over!");
         }
 
@@ -104,11 +113,13 @@ public class GamePanel extends JPanel implements ActionListener {
             if(bird.getBounds().intersects(pipe.getTopBounds()) || bird.getBounds().intersects(pipe.getBottomBounds())){
 
                 gameState = "GAME_OVER";
+                soundManager.playGameOverSound();
                 System.out.println("Game Over!");
             }
 
             if(!pipe.isScored() && pipe.isPassed(bird.getX())){
                 score++;
+                soundManager.playScoreSound();
                 pipe.setScored();
             }
             
