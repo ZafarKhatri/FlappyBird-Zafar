@@ -1,6 +1,6 @@
 # 🐦 FlappyBird-Zafar
 
-A Flappy Bird game built from scratch using Java.
+A Flappy Bird game built from scratch using Java and Java Swing.
 
 This project is being developed incrementally as a learning project. The goal is to understand the logic behind each game component rather than simply copying a finished implementation.
 
@@ -8,14 +8,21 @@ This project is being developed incrementally as a learning project. The goal is
 
 ```text
 FlappyBird-Zafar/
-├── FLOW_DIAGRAM_REFRENCE.png
+├── .gitignore
+├── README.md
 ├── progress.md
+├── assets/
+│   └── sounds/
+│       ├── flap.wav
+│       ├── score.wav
+│       └── game-over.wav
 └── src/
     ├── Bird.java
     ├── Game.java
     ├── GamePanel.java
     ├── Main.java
-    └── Pipe.java
+    ├── Pipe.java
+    └── SoundManager.java
 ```
 
 ## 🚀 Development Progress
@@ -35,6 +42,7 @@ FlappyBird-Zafar/
 - [x] Make the bird fall
 - [x] Add jump functionality
 - [x] Add keyboard input
+- [x] Add bird wing animation
 
 ### Phase 3 — Pipes
 
@@ -57,17 +65,26 @@ FlappyBird-Zafar/
 - [x] Restart / Replay functionality
 - [x] Game state system
 
+### Phase 5 — Sound Effects
+
+- [x] Create `SoundManager.java`
+- [x] Add bird flap sound
+- [x] Add score sound
+- [x] Add game-over sound
+- [x] Connect sound effects to their game events
+- [x] Test repeated sound playback
+
 ## 📍 Current Status
 
-**Step 22 — Bird Animation: COMPLETE ✅**
+**Step 23 — Sound Effects: COMPLETE ✅**
 
-The game now includes a space-controlled bird wing animation.
+The game now includes three sound effects:
 
-Features:
-- Wings flap when SPACE is pressed.
-- Wings remain still when SPACE is not pressed.
-- Animation stops after completing one flap cycle.
-- Wing movement is controlled using animation state variables.
+- Bird flap sound plays when SPACE is pressed.
+- Score sound plays when the bird passes a pipe.
+- Game-over sound plays when the bird hits a pipe or the ground.
+
+Sound loading and playback are handled by the `SoundManager` class. The flap audio is warmed up during loading to avoid a delay on its first playback.
 
 ### Current Game Flow
 
@@ -93,28 +110,19 @@ The current game states are:
 - `PLAYING`
 - `GAME_OVER`
 
-The old `gameOver` boolean logic has been replaced by the `gameState` system.
-
 ### Next Step
 
-**Step 23 — Sound Effects**
+**Step 24 — Difficulty Progression**
 
-The next goal is to add sound effects for game actions.
+The next goal is to make the game progressively more challenging as the player continues.
 
 ## 🗺️ Planned Roadmap
-
-### Phase 5 — Game States & Replay
-
-- [x] Restart / Replay functionality
-- [x] Game states
-- [ ] Start screen
-- [ ] Game Over screen
 
 ### Phase 6 — Polish
 
 - [x] Improve graphics
 - [x] Add bird animation
-- [ ] Add sound effects
+- [x] Add sound effects
 - [ ] Add difficulty progression
 - [ ] Add high-score system
 
@@ -139,12 +147,14 @@ This project is being developed step-by-step with a focus on understanding:
 - Game states
 - Score systems
 - Animation
+- Sound effects
 - Clean project structure
 
 ## 🛠️ Technology
 
 - Java
 - Java Swing
+- Java Sound API
 - Git
 - GitHub
 
