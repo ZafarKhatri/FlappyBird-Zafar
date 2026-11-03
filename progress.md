@@ -110,7 +110,7 @@ This file is the working progress tracker for the project.
 | Step 22 documentation | ✅ Pushed |
 | Step 23 Java changes and sound assets | ✅ Pushed |
 | Remove compiled `.class` files and add `.gitignore` | ✅ Pushed |
-| Step 23 documentation | ✅ Updating |
+| Step 23 documentation | ✅ Pushed |
 
 ---
 
