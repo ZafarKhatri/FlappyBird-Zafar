@@ -12,6 +12,10 @@ public class Bird {
     private double velocityY;
     private double gravity;
 
+    private int wingY = 15;
+    private boolean wingUp = true ;
+    private boolean wingAnimating = false;
+
     public Bird() {
         x = 100;
         y = 250;
@@ -34,11 +38,37 @@ public class Bird {
         if (y + height > gameHeight) {
         y = gameHeight - height;
         velocityY = 0;
+        }
     }
+
+    public void updateWingAnimation(){
+        if(!wingAnimating){
+            return;
+        }
+
+        if(wingUp){
+            wingY++;
+
+            if(wingY >= 20){
+                wingUp = false;
+            }
+        }
+        else{
+            wingY--;
+            
+            if(wingY <= 15){
+                wingUp = true;
+                wingAnimating = false;
+            }
+        }
     }
 
     public void flap() {
         velocityY = -8;
+
+        wingY = 15;
+        wingUp = true;
+        wingAnimating = true;
     }
     
     public Rectangle getBounds(){
@@ -64,7 +94,7 @@ public class Bird {
         g.fillRect(x + width - 2, y + 12, 10, 6);
         //Wing
         g.setColor(Color.ORANGE);
-        g.fillOval(x + 8, y +15, 18, 10);
+        g.fillOval(x + 8, y + wingY, 18, 10);
     }
 
     public int getX(){

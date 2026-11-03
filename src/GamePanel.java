@@ -87,6 +87,7 @@ public class GamePanel extends JPanel implements ActionListener {
         }
         
         bird.update(getHeight());
+        bird.updateWingAnimation();
 
         if(bird.isOnGround(getHeight())){
             gameState = "GAME_OVER";
