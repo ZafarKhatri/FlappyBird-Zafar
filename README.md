@@ -8,7 +8,6 @@ This project is being developed incrementally as a learning project. The goal is
 
 ```text
 FlappyBird-Zafar/
-
 ├── FLOW_DIAGRAM_REFRENCE.png
 ├── progress.md
 └── src/
@@ -23,53 +22,52 @@ FlappyBird-Zafar/
 
 ### Phase 1 — Foundation
 
-* [x] Create Java project
-* [x] Create main game entry point
-* [x] Create game window
-* [x] Create `GamePanel`
-* [x] Set up the game loop
+- [x] Create Java project
+- [x] Create main game entry point
+- [x] Create game window
+- [x] Create `GamePanel`
+- [x] Set up the game loop
 
 ### Phase 2 — Bird Physics & Input
 
-* [x] Create `Bird` class
-* [x] Add gravity
-* [x] Make the bird fall
-* [x] Add jump functionality
-* [x] Add keyboard input
+- [x] Create `Bird` class
+- [x] Add gravity
+- [x] Make the bird fall
+- [x] Add jump functionality
+- [x] Add keyboard input
 
 ### Phase 3 — Pipes
 
-* [x] Create `Pipe` class
-* [x] Add pipes to the game
-* [x] Add pipe gap
-* [x] Make the gap work correctly
-* [x] Add random pipe gaps
-* [x] Add pipe movement
-* [x] Remove pipes after they leave the screen
+- [x] Create `Pipe` class
+- [x] Add pipes to the game
+- [x] Add pipe gap
+- [x] Make the gap work correctly
+- [x] Add random pipe gaps
+- [x] Add pipe movement
+- [x] Remove pipes after they leave the screen
 
 ### Phase 4 — Core Gameplay
 
-* [x] Bird-pipe collision detection
-* [x] Ground collision
-* [x] Game Over detection
-* [x] Detect passed pipes
-* [x] Score system
-* [x] Display score
-* [x] Restart / Replay functionality
-* [x] Game state system
+- [x] Bird-pipe collision detection
+- [x] Ground collision
+- [x] Game Over detection
+- [x] Detect passed pipes
+- [x] Score system
+- [x] Display score
+- [x] Restart / Replay functionality
+- [x] Game state system
 
 ## 📍 Current Status
 
-**Step 21 — Improve Graphics: COMPLETE ✅**
+**Step 22 — Bird Animation: COMPLETE ✅**
 
-The game now has an improved visual presentation, including:
+The game now includes a space-controlled bird wing animation.
 
-* Sky background
-* Improved bird graphics
-* Pipe caps
-* Pipe highlights
-* Ground
-* Improved score display
+Features:
+- Wings flap when SPACE is pressed.
+- Wings remain still when SPACE is not pressed.
+- Animation stops after completing one flap cycle.
+- Wing movement is controlled using animation state variables.
 
 ### Current Game Flow
 
@@ -91,63 +89,64 @@ PLAYING
 
 The current game states are:
 
-* `READY`
-* `PLAYING`
-* `GAME_OVER`
+- `READY`
+- `PLAYING`
+- `GAME_OVER`
 
 The old `gameOver` boolean logic has been replaced by the `gameState` system.
 
 ### Next Step
 
-**Step 22 — Bird Animation**
+**Step 23 — Sound Effects**
 
-The next goal is to add animation to the bird.
+The next goal is to add sound effects for game actions.
 
 ## 🗺️ Planned Roadmap
 
 ### Phase 5 — Game States & Replay
 
-* [x] Restart / Replay functionality
-* [x] Game states
-* [ ] Start screen
-* [ ] Game Over screen
+- [x] Restart / Replay functionality
+- [x] Game states
+- [ ] Start screen
+- [ ] Game Over screen
 
 ### Phase 6 — Polish
 
-* [x] Improve graphics
-* [ ] Add bird animation
-* [ ] Add sound effects
-* [ ] Add difficulty progression
-* [ ] Add high-score system
+- [x] Improve graphics
+- [x] Add bird animation
+- [ ] Add sound effects
+- [ ] Add difficulty progression
+- [ ] Add high-score system
 
 ### Phase 7 — Finalization
 
-* [ ] Code cleanup
-* [ ] Testing
-* [ ] Bug fixing
-* [ ] Final documentation
+- [ ] Code cleanup
+- [ ] Testing
+- [ ] Bug fixing
+- [ ] Final documentation
 
 ## 🎯 Learning Approach
 
 This project is being developed step-by-step with a focus on understanding:
 
-* Java classes and objects
-* Swing components
-* Game loops
-* Timers and event handling
-* Keyboard input
-* 2D movement
-* Collision detection
-* Game states
-* Score systems
-* Clean project structure
+- Java classes and objects
+- Swing components
+- Game loops
+- Timers and event handling
+- Keyboard input
+- 2D movement
+- Collision detection
+- Game states
+- Score systems
+- Animation
+- Clean project structure
 
 ## 🛠️ Technology
 
-* Java
-* Java Swing
-* Git
-* GitHub
+- Java
+- Java Swing
+- Git
+- GitHub
 
 ## 📌 Development Tracker
 
