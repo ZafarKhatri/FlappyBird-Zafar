@@ -4,9 +4,9 @@ This file is the working progress tracker for the project.
 
 ## Current Position
 
-**Step 22 — Bird Animation ✅**
+**Step 23 — Sound Effects ✅**
 
-**Next: Step 23 — Sound Effects**
+**Next: Step 24 — Difficulty Progression**
 
 ---
 
@@ -44,7 +44,7 @@ This file is the working progress tracker for the project.
 - [x] Step 20 — Game states
 - [x] Step 21 — Improve graphics
 - [x] Step 22 — Bird animation
-- [ ] Step 23 — Sound effects
+- [x] Step 23 — Sound effects
 - [ ] Step 24 — Difficulty progression
 - [ ] Step 25 — Final cleanup & testing
 
@@ -70,6 +70,33 @@ This file is the working progress tracker for the project.
 
 ---
 
+## Step 23 — Sound Effects Details
+
+- [x] Create `assets/sounds` directory
+- [x] Prepare bird flap sound (`flap.wav`)
+- [x] Prepare score sound (`score.wav`)
+- [x] Prepare game-over sound (`game-over.wav`)
+- [x] Create `SoundManager.java`
+- [x] Add separate audio `Clip` variables
+- [x] Implement sound loading methods
+- [x] Implement sound playback methods
+- [x] Load sounds when `GamePanel` starts
+- [x] Connect flap sound to SPACE key
+- [x] Connect score sound to pipe passing
+- [x] Connect game-over sound to ground collision
+- [x] Connect game-over sound to pipe collision
+- [x] Warm up flap audio to avoid first-play delay
+- [x] Test all three sound effects
+
+### Expected Behaviour
+
+- Bird flap sound plays when SPACE is pressed.
+- Score sound plays when the bird passes a pipe.
+- Game-over sound plays when the bird hits a pipe or the ground.
+- Sound effects can be played repeatedly.
+
+---
+
 ## Git Checkpoints
 
 | Checkpoint | Status |
@@ -79,8 +106,11 @@ This file is the working progress tracker for the project.
 | Progress through Step 18 | ✅ Completed |
 | Progress through Step 20 | ✅ Completed |
 | Progress through Step 21 | ✅ Completed |
-| Step 22 Java changes | ✅ Completed |
-| Step 22 documentation | ✅ Completed |
+| Step 22 Java changes | ✅ Pushed |
+| Step 22 documentation | ✅ Pushed |
+| Step 23 Java changes and sound assets | ✅ Pushed |
+| Remove compiled `.class` files and add `.gitignore` | ✅ Pushed |
+| Step 23 documentation | ✅ Updating |
 
 ---
 
