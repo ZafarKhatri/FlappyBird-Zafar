@@ -2,9 +2,9 @@
 
 A Flappy Bird game built from scratch using Java and Java Swing.
 
-This project is being developed incrementally as a learning project. The goal is to understand the logic behind each game component rather than simply copying a finished implementation.
+This project was developed incrementally as a learning project. The goal was to understand the logic behind each game component rather than simply copying a finished implementation.
 
-## 📁 Current Project Structure
+## 📁 Project Structure
 
 ```text
 FlappyBird-Zafar/
@@ -74,17 +74,71 @@ FlappyBird-Zafar/
 - [x] Connect sound effects to their game events
 - [x] Test repeated sound playback
 
+### Phase 6 — Difficulty Progression
+
+- [x] Add difficulty-based pipe speed
+- [x] Increase pipe speed at score 5
+- [x] Increase pipe speed at score 10
+- [x] Increase pipe speed at score 15
+- [x] Apply current speed to existing pipes
+- [x] Apply current speed to newly created pipes
+- [x] Test difficulty progression
+
+### Phase 7 — Final Cleanup & Testing
+
+- [x] Remove debug output
+- [x] Test restart behaviour
+- [x] Test pipe reset
+- [x] Test score reset
+- [x] Test pipe collision
+- [x] Test ground collision
+- [x] Test flap sound
+- [x] Test score sound
+- [x] Test game-over sound
+- [x] Test difficulty progression
+- [x] Confirm complete game flow
+
 ## 📍 Current Status
 
-**Step 23 — Sound Effects: COMPLETE ✅**
+**Project Development Complete ✅**
 
-The game now includes three sound effects:
+The game now includes:
 
-- Bird flap sound plays when SPACE is pressed.
-- Score sound plays when the bird passes a pipe.
-- Game-over sound plays when the bird hits a pipe or the ground.
+- Bird gravity and jumping
+- Keyboard controls
+- Animated bird wings
+- Randomly generated pipe gaps
+- Moving pipes
+- Pipe removal after leaving the screen
+- Pipe and ground collision detection
+- Game Over state
+- Score tracking
+- Restart / Replay functionality
+- Multiple game states
+- Sound effects
+- Progressive difficulty
+- Final cleanup and testing
 
-Sound loading and playback are handled by the `SoundManager` class. The flap audio is warmed up during loading to avoid a delay on its first playback.
+### Difficulty Progression
+
+The pipe speed increases as the player's score increases:
+
+| Score | Pipe Speed |
+|---:|---:|
+| 0–4 | 3 |
+| 5–9 | 4 |
+| 10–14 | 5 |
+| 15+ | 6 |
+
+Both existing pipes and newly created pipes use the current difficulty speed.
+
+### Game States
+
+The game uses three main states:
+
+- `READY`
+- `PLAYING`
+- `GAME_OVER`
 
 ### Current Game Flow
 
@@ -104,51 +158,25 @@ GAME_OVER
 PLAYING
 ```
 
-The current game states are:
+## 🔊 Sound Effects
 
-- `READY`
-- `PLAYING`
-- `GAME_OVER`
+The game includes three sound effects:
 
-### Next Step
+- **Flap:** Plays when SPACE is pressed.
+- **Score:** Plays when the bird successfully passes a pipe.
+- **Game Over:** Plays when the bird hits a pipe or the ground.
 
-**Step 24 — Difficulty Progression**
+Sound loading and playback are handled by the `SoundManager` class.
 
-The next goal is to make the game progressively more challenging as the player continues.
+The flap audio is warmed up during loading to avoid a delay during its first playback.
 
-## 🗺️ Planned Roadmap
+## 🎮 Controls
 
-### Phase 6 — Polish
-
-- [x] Improve graphics
-- [x] Add bird animation
-- [x] Add sound effects
-- [ ] Add difficulty progression
-- [ ] Add high-score system
-
-### Phase 7 — Finalization
-
-- [ ] Code cleanup
-- [ ] Testing
-- [ ] Bug fixing
-- [ ] Final documentation
-
-## 🎯 Learning Approach
-
-This project is being developed step-by-step with a focus on understanding:
-
-- Java classes and objects
-- Swing components
-- Game loops
-- Timers and event handling
-- Keyboard input
-- 2D movement
-- Collision detection
-- Game states
-- Score systems
-- Animation
-- Sound effects
-- Clean project structure
+| Key | Action |
+|---|---|
+| `SPACE` | Start the game |
+| `SPACE` | Make the bird flap |
+| `SPACE` | Restart after Game Over |
 
 ## 🛠️ Technology
 
@@ -158,6 +186,34 @@ This project is being developed step-by-step with a focus on understanding:
 - Git
 - GitHub
 
+## 🎯 Learning Outcomes
+
+This project was developed step-by-step to understand:
+
+- Java classes and objects
+- Swing components
+- Game loops
+- Timers and event handling
+- Keyboard input
+- 2D movement
+- Gravity and jumping
+- Collision detection
+- Game states
+- Score systems
+- Animation
+- Sound effects
+- Difficulty progression
+- Clean project structure
+- Git and GitHub workflow
+
 ## 📌 Development Tracker
 
 Detailed step-by-step development progress is maintained in [`progress.md`](progress.md).
+
+The complete development history, including individual implementation steps and testing checkpoints, is documented there.
+
+## ✅ Project Status
+
+**Completed**
+
+The core Flappy Bird game has been implemented, tested, and is ready to be used as a completed Java learning project.

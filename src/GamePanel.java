@@ -33,7 +33,7 @@ public class GamePanel extends JPanel implements ActionListener {
         soundManager.loadScoreSound();
         soundManager.loadGameOverSound();
         pipes = new ArrayList<>();
-        pipes.add(new Pipe());
+        pipes.add(new Pipe(getPipeSpeed()));
         pipeTimer = 0;
         gameState = "READY";
         score = 0;
@@ -100,7 +100,6 @@ public class GamePanel extends JPanel implements ActionListener {
         if(bird.isOnGround(getHeight())){
             gameState = "GAME_OVER";
             soundManager.playGameOverSound();
-            System.out.println("Game Over!");
         }
 
         Iterator<Pipe> iterator = pipes.iterator();
@@ -108,13 +107,13 @@ public class GamePanel extends JPanel implements ActionListener {
         while (iterator.hasNext()) {
             Pipe pipe = iterator.next();
 
+            pipe.setSpeed(getPipeSpeed());
             pipe.update();
 
             if(bird.getBounds().intersects(pipe.getTopBounds()) || bird.getBounds().intersects(pipe.getBottomBounds())){
 
                 gameState = "GAME_OVER";
                 soundManager.playGameOverSound();
-                System.out.println("Game Over!");
             }
 
             if(!pipe.isScored() && pipe.isPassed(bird.getX())){
@@ -131,20 +130,36 @@ public class GamePanel extends JPanel implements ActionListener {
         pipeTimer++;
 
         if(pipeTimer >= 100){
-            pipes.add(new Pipe());
+            pipes.add(new Pipe(getPipeSpeed()));
             pipeTimer = 0;
         }
 
         repaint();
     }
+
+    private int getPipeSpeed(){
+        if(score >=15){
+            return 6;
+        }
+        else if(score >=10){
+            return 5;
+        }
+        else if(score >= 5){
+            return 4;
+        }
+        else{
+            return 3;
+        }
+    }
+
     private void restartGame(){
         bird = new Bird();
         
         pipes.clear();
-        pipes.add(new Pipe());
+        score = 0;
+        pipes.add(new Pipe(getPipeSpeed()));
 
         pipeTimer = 0;
-        score = 0;
         gameState = "PLAYING";
     }
 }

@@ -4,9 +4,9 @@ This file is the working progress tracker for the project.
 
 ## Current Position
 
-**Step 23 — Sound Effects ✅**
+**Step 25 — Final Cleanup & Testing ✅**
 
-**Next: Step 24 — Difficulty Progression**
+**Project Development Complete 🎉**
 
 ---
 
@@ -45,8 +45,8 @@ This file is the working progress tracker for the project.
 - [x] Step 21 — Improve graphics
 - [x] Step 22 — Bird animation
 - [x] Step 23 — Sound effects
-- [ ] Step 24 — Difficulty progression
-- [ ] Step 25 — Final cleanup & testing
+- [x] Step 24 — Difficulty progression
+- [x] Step 25 — Final cleanup & testing
 
 ---
 
@@ -97,6 +97,56 @@ This file is the working progress tracker for the project.
 
 ---
 
+## Step 24 — Difficulty Progression Details
+
+- [x] Add difficulty-based pipe speed
+- [x] Increase pipe speed at score 5
+- [x] Increase pipe speed at score 10
+- [x] Increase pipe speed at score 15
+- [x] Apply current speed to existing pipes
+- [x] Apply current speed to newly created pipes
+- [x] Test difficulty progression
+
+### Expected Behaviour
+
+- Pipe speed starts at 3.
+- Pipe speed increases to 4 at score 5.
+- Pipe speed increases to 5 at score 10.
+- Pipe speed increases to 6 at score 15.
+- Existing and newly created pipes use the current difficulty speed.
+
+---
+
+## Step 25 — Final Cleanup & Testing Details
+
+- [x] Remove debug `System.out.println()` statements
+- [x] Test bird restart behaviour
+- [x] Test pipe reset behaviour
+- [x] Test score reset behaviour
+- [x] Test pipe collision
+- [x] Test ground collision
+- [x] Test flap sound
+- [x] Test score sound
+- [x] Test game-over sound
+- [x] Test difficulty progression
+- [x] Confirm complete game flow
+
+### Final Test Result
+
+- Bird movement: ✅
+- Jump / flap: ✅
+- Pipes: ✅
+- Collision detection: ✅
+- Score system: ✅
+- Restart system: ✅
+- Game states: ✅
+- Bird animation: ✅
+- Sound effects: ✅
+- Difficulty progression: ✅
+- Final testing: ✅
+
+---
+
 ## Git Checkpoints
 
 | Checkpoint | Status |
@@ -111,6 +161,10 @@ This file is the working progress tracker for the project.
 | Step 23 Java changes and sound assets | ✅ Pushed |
 | Remove compiled `.class` files and add `.gitignore` | ✅ Pushed |
 | Step 23 documentation | ✅ Pushed |
+| Step 24 Java changes | ✅ Completed |
+| Step 24 documentation | ✅ Completed |
+| Step 25 final cleanup & testing | ✅ Completed |
+| Final project development | ✅ Completed |
 
 ---
 

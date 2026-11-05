@@ -16,7 +16,7 @@ public class Pipe {
 
     private boolean scored;
 
-    public Pipe(){
+    public Pipe(int speed){
 
         random = new Random();
 
@@ -26,14 +26,17 @@ public class Pipe {
         gapHeight = 150;
 
         width = 60;
-        speed = 3;
-
+        this.speed = speed;
         scored = false;
 
     }
 
     public void update(){
         x -= speed;
+    }
+
+    public void setSpeed(int speed){
+        this.speed = speed;
     }
 
     public void draw(Graphics g){
@@ -74,5 +77,5 @@ public class Pipe {
 
     public Rectangle getBottomBounds(){
         return new Rectangle(x, gapY + gapHeight, width, 600 - (gapY +gapHeight));
-    }
+    }  
 }
